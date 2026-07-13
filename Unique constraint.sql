@@ -9,6 +9,14 @@ updated_at INT
 
 
 
+
+CREATE TABLE categories(
+category_id SERIAL PRIMARY KEY,
+category_name VARCHAR(40),
+parent_category_id INT
+)
+
+
 CREATE TABLE products(
 product_id INT PRIMARY KEY,
 product_name VARCHAR(40),
@@ -20,10 +28,6 @@ FOREIGN KEY (category_id) REFERENCES categories(category_id)
 );
 
 
-
-CREATE TABLE categories(
-category_id SERIAL PRIMARY KEY,
-category_name VARCHAR(40),
-parent_category_id INT
-)
-
+SELECT * FROM users;
+SELECT * FROM categories;
+SELECT * FROM products;
